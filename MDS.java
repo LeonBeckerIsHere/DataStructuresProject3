@@ -253,8 +253,9 @@ public class MDS {
             sum = 0;
 
             for(Integer j : n) {
-                sum+=j;
-                names.add(j);
+                //Only add to the sum only if j isnt already in the set
+                if(names.add(j))
+                    sum+=j;
             }
         }
 
